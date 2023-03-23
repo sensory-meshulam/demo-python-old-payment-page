@@ -7,8 +7,12 @@ app = Flask(__name__)
 CORS(app, origins="*")
             
 
-MESHULAM_PAGE_CODE = 'b73ca07591f8'
-# MESHULAM_API_KEY = 'b60e1d4cbd29'
+MESHULAM_PAGE_CODE = 'b73ca07591f8' # generic-page
+    #credit: '0b7a16e03b25'
+    #google-pay: '77a2993849cd'
+    #apple-pay: '9eeea7787d67'
+    #bit: 'e20c9458e9f3'
+    #bit QR: '39bf173ce7d0'
 MESHULAM_USER_ID = '4ec1d595ae764243'
 MESHULAM_API_URL = 'https://sandbox.meshulam.co.il/api/light/server/1.0/'
 successUrl = "https://localhost:44374/static/success.html?success=1"
@@ -29,7 +33,6 @@ def get_payment_link():
     formData = {
         'pageCode': MESHULAM_PAGE_CODE,
         'userId': MESHULAM_USER_ID,
-        # 'apiKey': MESHULAM_API_KEY,
         'sum': sum,
         'paymentNum': str(paymentsNum),
         'description': description,
