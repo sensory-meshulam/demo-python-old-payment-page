@@ -34,8 +34,8 @@ def get_payment_link():
         'paymentNum': str(paymentsNum),
         'description': description,
         'transactionTypes': ['1', '6', '13', '14'], #[Credit, Bit, ApplePay, GooglePay] If you don't need one of them, give it a value of '1'
-        'successUrl': "https://localhost:44374/Client/success.html?success=1",
-        'cancelUrl': "https://localhost:44374/Client/failure.html?failure=1",
+        'successUrl': "http://localhost:5000/static/success.html?success=1",
+        'cancelUrl': "http://localhost:5000/static/failure.html?failure=1",
         # With the help of cFields you can transfer information that will be retrieved on the success page (limited to 5 cFields)
         'cField1': MESHULAM_PAGE_CODE,
         'cField2': 'blabla',
